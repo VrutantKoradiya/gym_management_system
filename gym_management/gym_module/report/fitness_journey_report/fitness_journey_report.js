@@ -17,7 +17,7 @@ frappe.query_reports["Fitness Journey Report"] = {
 	    }
 	],
   
-	// Optional: Customize chart colors and behavior after loading
+	// customize chart colors and behavior after loading
 	onload: function(report) {
 	    frappe.msgprint({
 		  message: __("📊 Select a Member to view their Fitness Journey."),
@@ -27,7 +27,7 @@ frappe.query_reports["Fitness Journey Report"] = {
 	},
   
 	formatter: function(value, row, column, data, default_formatter) {
-	    // Highlight BMI values
+	    // highlight BMI values
 	    if (column.fieldname === "bmi" && value) {
 		  let bmi = parseFloat(value);
 		  let color = "green";

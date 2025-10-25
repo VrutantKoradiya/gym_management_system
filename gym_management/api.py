@@ -68,7 +68,7 @@ def expire_trainer_subscriptions():
 
 
 
-
+#update attendence
 def update_attendance_status():
     # mark old classes 'Missed' if not attended
     today = nowdate()
@@ -85,7 +85,7 @@ def update_attendance_status():
 
 
 
-#for page ( for page ) 
+#for page 
 @frappe.whitelist()
 def get_member_profile_data():
     user = frappe.session.user
@@ -99,7 +99,7 @@ def get_member_profile_data():
         "email": member.email
     }
 
-    # active Membership
+    # active membership
     active_plan = member.active_plan
     if active_plan:
         plan = frappe.db.get_value("Gym Membership", active_plan, ["name", "end_date"], as_dict=True)
@@ -111,7 +111,7 @@ def get_member_profile_data():
         data["end_date"] = None
         data["remaining_days"] = None
 
-    # trainer Info
+    # trainer info
     if member.trainer:
         trainer = frappe.db.get_value("Gym Trainer", member.trainer, ["trainer_name", "mobile_no"], as_dict=True)
         data["trainer_name"] = trainer.trainer_name

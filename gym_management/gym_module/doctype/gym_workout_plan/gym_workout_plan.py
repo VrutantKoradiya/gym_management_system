@@ -7,7 +7,7 @@ from frappe.model.document import Document
 
 class GymWorkoutPlan(Document):
 	def validate(self):
-		# Ensure trainer + level combination is unique
+		# ensure trainer + level combination is unique
 		if frappe.db.exists("Gym Workout Plan",{ "trainer": self.trainer,"level": self.level,"name": ["!=", self.name] }): 
 			# here name filter means - dont count the current record from the query.
 			frappe.throw(f"You already have a workout plan for the '{self.level}' level.")

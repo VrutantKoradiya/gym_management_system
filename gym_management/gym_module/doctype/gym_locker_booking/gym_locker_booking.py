@@ -4,7 +4,7 @@ from frappe.model.document import Document
 
 class GymLockerBooking(Document):
 	def validate(self):
-            # Checking  if locker already booked and still active
+            # checking  if locker already booked and still active
             is_exists = frappe.db.exists("Gym Locker Booking",
             {
                 "locker_no": self.locker_no,

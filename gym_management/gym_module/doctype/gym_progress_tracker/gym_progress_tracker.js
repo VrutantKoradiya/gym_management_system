@@ -6,7 +6,7 @@ frappe.ui.form.on("Gym Progress Tracker", {
       //calculate BMI based on weight enterd or height which one is fetch from Gym Member Dcotype
 	weight: function(frm) {
             if (frm.doc.weight && frm.doc.member) {
-                // Fetch height from Gym Member
+                // fetch height from Gym Member
                 frappe.call({
                     method: "gym_management.api.get_member_height",
                     args: { member: frm.doc.member },

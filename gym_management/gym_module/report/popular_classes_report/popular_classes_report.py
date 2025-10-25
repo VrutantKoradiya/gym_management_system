@@ -4,14 +4,14 @@ import math
 def execute(filters=None):
     filters = filters or {}
 
-    # build filters
+    # building an  filters
     conditions = ""
     if filters.get("trainer"):
         conditions += f" AND trainer = '{filters.get('trainer')}'"
     if filters.get("from_date") and filters.get("to_date"):
         conditions += f" AND class_date BETWEEN '{filters.get('from_date')}' AND '{filters.get('to_date')}'"
 
-    # Use COALESCE for safe averages
+    # use COALESCE for safe averages
     query = f"""
         SELECT
             class_type,

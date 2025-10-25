@@ -6,10 +6,10 @@ frappe.pages['gym-profile'].on_page_load = function(wrapper) {
 	});
 
 
-	 // Load HTML into the page
+	 // load HTML into the page
 	 $(frappe.render_template("gym_profile", {})).appendTo(page.body);
 
-	 // Fetch current logged-in member info
+	 // fetch current logged-in member info
 	 frappe.call({
 	     method: "gym_management.api.get_member_profile_data",
 	     callback: function(r) {

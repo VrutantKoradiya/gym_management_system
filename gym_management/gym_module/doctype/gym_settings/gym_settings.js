@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("Gym Settings", {
       validate(frm) {
-            // Validate positive numbers
+            // validate positive numbers
             if (frm.doc.max_lockers < 1) {
                 frappe.throw("Max Lockers must be at least 1.");
             }
