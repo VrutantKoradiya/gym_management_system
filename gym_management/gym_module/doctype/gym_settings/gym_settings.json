@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-10-22 12:38:01.142727",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_equa",
+  "max_lockers",
+  "max_class_bookings",
+  "gym_email"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_equa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "max_lockers",
+   "fieldtype": "Int",
+   "label": "Max Lockers"
+  },
+  {
+   "fieldname": "max_class_bookings",
+   "fieldtype": "Int",
+   "label": "Max Class Bookings per Week"
+  },
+  {
+   "fieldname": "gym_email",
+   "fieldtype": "Data",
+   "label": "Gym Contact Email"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-10-24 13:51:43.162702",
+ "modified_by": "Administrator",
+ "module": "GYM module",
+ "name": "Gym Settings",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-10-22 12:34:45.707770",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_b5ag",
+  "exercise_name",
+  "sets",
+  "reps",
+  "duration",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_b5ag",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "exercise_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Exercise Name"
+  },
+  {
+   "fieldname": "sets",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sets"
+  },
+  {
+   "fieldname": "reps",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Reps"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Duration (mins)"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-10-22 12:37:04.140658",
+ "modified_by": "Administrator",
+ "module": "GYM module",
+ "name": "Gym Workout Plan Exercise",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

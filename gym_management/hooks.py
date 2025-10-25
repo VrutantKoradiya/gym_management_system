@@ -148,23 +148,26 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"gym_management.tasks.all"
-# 	],
-# 	"daily": [
-# 		"gym_management.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"gym_management.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"gym_management.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"gym_management.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"gym_management.tasks.all"
+	# ],
+	"daily": [
+		"gym_management.api.expire_memberships",
+            "gym_management.api.expire_locker_bookings",
+		"gym_management.api.expire_trainer_subscriptions",
+		"gym_management.api.update_attendance_status"
+	],
+	# "hourly": [
+	# 	"gym_management.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"gym_management.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"gym_management.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------
