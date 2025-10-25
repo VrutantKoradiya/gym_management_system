@@ -216,7 +216,7 @@ useage:
 2. for creating reports, Pages...
 
 
-70-70% - Self implementation
+60-70% - Self implementation
 
 
 
