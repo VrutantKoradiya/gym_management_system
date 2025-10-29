@@ -1,6 +1,7 @@
 import frappe
 from frappe.utils import getdate, nowdate
 
+# expires membership if enddate is today date
 def expire_memberships():
     today = nowdate()
     
@@ -33,7 +34,7 @@ def expire_memberships():
 
 
 
-
+#expires locker booking if enddate is today date
 def expire_locker_bookings():
     
     today = nowdate()
@@ -52,7 +53,7 @@ def expire_locker_bookings():
 
 
 
-
+#expires trainer sybscription if enddate is today date
 def expire_trainer_subscriptions():
     
     today = nowdate()
@@ -68,15 +69,17 @@ def expire_trainer_subscriptions():
 
 
 
-#update attendence
+#update attendence -  mark old classes 'Missed' if not not set an attended
 def update_attendance_status():
-    # mark old classes 'Missed' if not attended
+
     today = nowdate()
+
     past_bookings = frappe.get_all(
         "Gym Class Booking",
         filters={"booking_date": ["<", today], "attendance_status": ["in", ["", None]]},
         fields=["name"]
     )
+    
     for b in past_bookings:
         frappe.db.set_value("Gym Class Booking", b.name, "attendance_status", "Missed")
     frappe.db.commit()

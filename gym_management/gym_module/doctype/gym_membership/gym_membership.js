@@ -47,7 +47,7 @@ frappe.ui.form.on("Gym Membership", {
                         if (r.message) {
                             let p = r.message;
                             frappe.msgprint(
-                                `Member ${frm.doc.member} currently has an active plan:<br>
+                                `member ${frm.doc.member} currently has an active plan:<br>
                                 ${p.membership_name} (ends on ${frappe.format(p.end_date, {fieldtype: "Date"})})`
                             );
                         }

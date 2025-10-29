@@ -4,6 +4,7 @@
 frappe.ui.form.on("Gym Progress Tracker", {
 
       //calculate BMI based on weight enterd or height which one is fetch from Gym Member Dcotype
+      //note: if height is increased then change manually
 	weight: function(frm) {
             if (frm.doc.weight && frm.doc.member) {
                 // fetch height from Gym Member
@@ -19,7 +20,7 @@ frappe.ui.form.on("Gym Progress Tracker", {
                                 let bmi = frm.doc.weight / (height_m * height_m);
                                 frm.set_value('bmi', bmi.toFixed(2));
                             } else {
-                                frappe.msgprint("⚠️ Height not found for this member.");
+                                frappe.msgprint(" height not found for this member ");
                             }
                         }
                     }

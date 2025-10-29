@@ -5,7 +5,7 @@ frappe.ui.form.on("Gym Workout Plan", {
       before_save(frm) {
             // check at least one exercise is added
             if (!frm.doc.exercises || frm.doc.exercises.length === 0) {
-                frappe.throw("Please add at least one exercise.");
+                frappe.throw("please add atleast one exercise.");
             }
         }
 });
@@ -46,7 +46,7 @@ frappe.ui.form.on('Gym Workout Plan Exercise', {
     // trigger message a new row is added
     exercises_add: function(frm, cdt, cdn) {
         let row = locals[cdt][cdn];
-        frappe.msgprint("new exercise row added. Please fill all details!");
+        frappe.msgprint("new exercise row added. please fill all details!");
     }
 });
 

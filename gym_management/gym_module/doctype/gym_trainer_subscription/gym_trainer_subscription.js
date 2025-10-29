@@ -12,12 +12,17 @@ frappe.ui.form.on("Gym Trainer Subscription", {
         },
       calculate_enddate: function(frm) {
             if (frm.doc.start_date && frm.doc.subscription_type) {
+
                 let days = 0;
     
-                if (frm.doc.subscription_type === "Weekly") days = 7;
-                else if (frm.doc.subscription_type === "Monthly") days = 30;
-                else if (frm.doc.subscription_type === "Quarterly") days = 90;
-    
+                if (frm.doc.subscription_type === "Weekly"){
+                    days = 7;  
+                }
+                else if (frm.doc.subscription_type === "Monthly"){
+                }     
+                else if (frm.doc.subscription_type === "Quarterly") {
+                    days = 90;
+                }
                 let end_date = frappe.datetime.add_days(frm.doc.start_date, days);
                 frm.set_value('end_date', end_date);
             }

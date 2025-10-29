@@ -10,8 +10,7 @@ class GymLockerBooking(Document):
                 "locker_no": self.locker_no,
                 "status": "Booked",
                 "name": ["!=", self.name]
-            }
-            )
+            })
 
             if is_exists:
                   frappe.throw(f"Locker is already booked.")
@@ -20,4 +19,4 @@ class GymLockerBooking(Document):
             # check member has active membership
             status = frappe.db.get_value("Gym Member", self.member, "status")
             if status != "Active":
-                  frappe.throw("this membership is not active please renew first")
+                  frappe.throw("this membership is not active please renew first by creating new record")
