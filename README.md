@@ -198,13 +198,13 @@ Client:
 ## ##########################################################################################
 
 ## Custom page :::::::::
-1. for page practical use user rames means its email to create member ...  
+1. taking current user & show its plan & other details ( AI used here )
 
 ---
 
 ## ##########################################################################################
 
-## Reports ::::::::
+## Reports :::::::: ( AI used here )
 1. Fitness Journey Report  
    - report that shows the fitness journey of a customer.  
    - Show tracked weight, calories, etc in a report and also show a chart.  
