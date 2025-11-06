@@ -7,7 +7,7 @@ def execute(filters=None):
         {"label": "Date", "fieldname": "date", "fieldtype": "Date", "width": 120},
         {"label": "Weight (kg)", "fieldname": "weight", "fieldtype": "Float", "width": 100},
         {"label": "Calories Intake", "fieldname": "calories_intake", "fieldtype": "Float", "width": 120},
-        {"label": "BMI", "fieldname": "bmi", "fieldtype": "Float", "width": 80}
+        {"label": "BMI", "fieldname": "bmi", "fieldtype": "Float", "width": 120}
     ]
 
     data = frappe.get_all("Gym Progress Tracker",

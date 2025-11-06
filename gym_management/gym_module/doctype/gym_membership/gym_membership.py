@@ -28,7 +28,7 @@ class GymMembership(Document):
 
 
 # get member details if memebership is already exists
-@frappe.whitelist
+@frappe.whitelist()
 def get_active_member_details(member):
 	plan = frappe.db.get_value(
 		"Gym Membership",

@@ -9,13 +9,13 @@
   "section_break_anw4",
   "amended_from",
   "membership_name",
+  "member",
   "plan_type",
   "price",
   "column_break_29pc",
   "start_date",
   "duration",
   "end_date",
-  "member",
   "status",
   "payment_status",
   "notes"
@@ -49,7 +49,8 @@
   {
    "fieldname": "price",
    "fieldtype": "Currency",
-   "label": "Price"
+   "label": "Price",
+   "read_only": 1
   },
   {
    "fieldname": "duration",
@@ -98,7 +99,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-10-24 10:02:32.242436",
+ "modified": "2025-10-29 17:31:48.899974",
  "modified_by": "Administrator",
  "module": "GYM module",
  "name": "Gym Membership",

@@ -13,10 +13,10 @@
   "gender",
   "dob",
   "join_date",
-  "column_break_g52a",
   "gym_membership",
   "trainer",
   "active_plan",
+  "column_break_g52a",
   "height",
   "weight",
   "calories_intake",
@@ -73,19 +73,22 @@
    "fieldname": "gym_membership",
    "fieldtype": "Link",
    "label": "Membership",
-   "options": "Gym Membership"
+   "options": "Gym Membership",
+   "read_only": 1
   },
   {
    "fieldname": "trainer",
    "fieldtype": "Link",
    "label": "Trainer",
-   "options": "Gym Trainer"
+   "options": "Gym Trainer",
+   "read_only": 1
   },
   {
    "fieldname": "active_plan",
    "fieldtype": "Link",
    "label": "Active Plan",
-   "options": "Gym Membership"
+   "options": "Gym Membership",
+   "read_only": 1
   },
   {
    "fieldname": "height",
@@ -126,14 +129,15 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nActive\nInactive\nExpired"
+   "options": "\nActive\nInactive\nExpired",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-25 08:52:34.578782",
+ "modified": "2025-10-29 17:29:50.770637",
  "modified_by": "Administrator",
  "module": "GYM module",
  "name": "Gym Member",

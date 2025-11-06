@@ -27,7 +27,7 @@ def expire_memberships():
         })
         
         # showing in logs
-        frappe.logger().info(f"Membership {m.name} for member {m.member} is expired.")
+        frappe.logger("GYM").info(f"Membership {m.name} for member {m.member} is expired.")
     
     frappe.db.commit()
 
@@ -47,7 +47,7 @@ def expire_locker_bookings():
     
     for locker in lockers:
         frappe.db.set_value("Gym Locker Booking", locker.name, "status", "Expired")
-        frappe.logger().info(f"Locker Booking {locker.name} marked as expired.")
+        frappe.logger("GYM").info(f"Locker Booking {locker.name} marked as expired.")
     
     frappe.db.commit()
 
@@ -161,3 +161,7 @@ def trainer_rating(trainer):
         ratings = 0
 
     return ratings
+    
+# Why .avg_rating?
+# Because that’s the alias you gave in SQL: SELECT AVG(rating) as avg_rating
+# Whatever name you give after AS becomes the key name in the returned dictionary.
